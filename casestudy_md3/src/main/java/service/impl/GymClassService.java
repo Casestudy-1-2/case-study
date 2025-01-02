@@ -3,6 +3,7 @@ package service.impl;
 import entity.GymClass;
 import repository.GymClassRepository;
 import service.IGymClassService;
+import service.IService;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class GymClassService implements IGymClassService {
 
     @Override
     public List<GymClass> getAll() {
-        return gymClassRepository.getAll() ;
+        return gymClassRepository.getAll();
     }
 
     @Override

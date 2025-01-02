@@ -14,12 +14,19 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public List<Customer> getAll() {
-        return customerRepository.getAll();
+        List<Customer> customers = customerRepository.getAll();
+        return customers;
     }
 
     @Override
     public void add(Customer customer) {
         customerRepository.add(customer, customer.getIdClass());
+    }
+
+
+    @Override
+    public List<CustomerDTO> getAllDTO() {
+        return customerRepository.getAllDTO();
     }
 
     @Override
@@ -36,11 +43,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public Customer getById(int id) {
-        return customerRepository.getById(id);
-    }
-
-    @Override
-    public List<CustomerDTO> getAllDTO() {
-        return customerRepository.getAllDTO();
+        Customer customer = customerRepository.getById(id);
+        return customer;
     }
 }

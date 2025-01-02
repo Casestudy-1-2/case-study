@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b206e39c-ea06-488f-a246-a3c813c2ff43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/GymClassDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Trainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" afterDir="false" />
+    <list default="true" id="bab86d73-b7ca-45d4-90df-6d0b1f384624" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295/storage_v2/_src_/schema/gym_management.R2liuA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295/storage_v2/_src_/schema/gym_management3.zL_qUw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0664dd9-4ea5-47f5-9b35-c2ac821d6c29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0664dd9-4ea5-47f5-9b35-c2ac821d6c29/storage_v2/_src_/schema/gym_management3.zL_qUw.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +27,27 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="gym" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,12 +63,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="2qqIqZOyYc2VGo4WOnv3wnjLhj7" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2qy0CCQjFYPteTRTDHQOlcQpVTK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,16 +73,23 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build casestudy_md3.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build gym.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 9.0.98.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dung&quot;,
+    &quot;Tomcat Server.Tomcat 9.0.981.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.create.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;thao1&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/case-study/casestudy_md3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/codegym/module3/casestudy/casestudy_md3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,18 +98,26 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp\WEB-INF\view" />
+      <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp\WEB-INF" />
+      <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.98" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+    <configuration name="Tomcat 9.0.98" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 9.0.98" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="Gradle : com.example : casestudy_md3-1.0-SNAPSHOT.war">
+        <artifact name="Gradle : com.example : gym-1.0-SNAPSHOT.war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="05cf21ca-b460-4861-9259-45b4ddc750e6" />
+        <option name="BASE_DIRECTORY_NAME" value="fc4bc9a3-90d3-4f0a-a73d-483092a8f766" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -101,7 +125,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58955" />
+        <option name="DEBUG_PORT" value="54057" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -166,10 +190,15 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="Gradle : com.example : casestudy_md3-1.0-SNAPSHOT.war" />
+          <artifact name="Gradle : com.example : gym-1.0-SNAPSHOT.war" />
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Tomcat Server.Tomcat 9.0.98" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -182,41 +211,34 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b206e39c-ea06-488f-a246-a3c813c2ff43" name="Changes" comment="" />
-      <created>1735383870331</created>
+      <changelist id="bab86d73-b7ca-45d4-90df-6d0b1f384624" name="Changes" comment="" />
+      <created>1735619378659</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1735383870331</updated>
-      <workItem from="1735383871362" duration="27000" />
-      <workItem from="1735383923810" duration="3101000" />
-      <workItem from="1735461278333" duration="43000" />
-      <workItem from="1735461337597" duration="130000" />
-      <workItem from="1735461493187" duration="302000" />
-      <workItem from="1735461809912" duration="649000" />
-      <workItem from="1735462566469" duration="333000" />
-      <workItem from="1735462907873" duration="6553000" />
-      <workItem from="1735491764553" duration="524000" />
-      <workItem from="1735521108686" duration="744000" />
-      <workItem from="1735521875742" duration="23000" />
-      <workItem from="1735521908025" duration="2699000" />
-      <workItem from="1735525331303" duration="598000" />
-      <workItem from="1735533748479" duration="71000" />
-      <workItem from="1735542535936" duration="8511000" />
-      <workItem from="1735576616482" duration="136000" />
-      <workItem from="1735601851540" duration="2395000" />
-      <workItem from="1735606980408" duration="805000" />
-      <workItem from="1735607998564" duration="24928000" />
-      <workItem from="1735637784921" duration="1558000" />
-      <workItem from="1735740566297" duration="4378000" />
-      <workItem from="1735783136245" duration="173000" />
-      <workItem from="1735783432701" duration="2384000" />
-      <workItem from="1735785832285" duration="8000" />
-      <workItem from="1735785976217" duration="2967000" />
-      <workItem from="1735789110837" duration="2462000" />
+      <updated>1735619378659</updated>
+      <workItem from="1735619379868" duration="9365000" />
+      <workItem from="1735629601178" duration="9767000" />
+      <workItem from="1735648378555" duration="19142000" />
+      <workItem from="1735779726873" duration="4921000" />
+      <workItem from="1735792877710" duration="330000" />
+      <workItem from="1735793564135" duration="1247000" />
+      <workItem from="1735795058028" duration="4809000" />
+      <workItem from="1735806385986" duration="497000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

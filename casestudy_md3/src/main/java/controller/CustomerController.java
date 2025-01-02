@@ -96,11 +96,11 @@ public class CustomerController extends HttpServlet {
             try {
                 age = Integer.parseInt(ageParam);
             } catch (NumberFormatException e) {
-                resp.sendRedirect("Error! Tuổi phải là một số.");
+                resp.sendRedirect("errorPage.jsp?error=Age must be a valid number");
                 return;
             }
         } else {
-            resp.sendRedirect("Error! Tuổi bắt buộc phải nhập.");
+            resp.sendRedirect("errorPage.jsp?error=Age is required");
             return;
         }
 
