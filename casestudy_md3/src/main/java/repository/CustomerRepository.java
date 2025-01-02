@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerRepository {
+    private static List<Customer> customers = new ArrayList<Customer>();
 
     public List<Customer> getAll() {
 
@@ -25,7 +26,7 @@ public class CustomerRepository {
                 int age = resultSet.getInt("age");
                 String phone = resultSet.getString("phone");
                 String email = resultSet.getString("email");
-                //        customers.add(new Customer(id, name, age, phone, email));
+        //        customers.add(new Customer(id, name, age, phone, email));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -131,3 +132,4 @@ public class CustomerRepository {
         return customer;
     }
 }
+

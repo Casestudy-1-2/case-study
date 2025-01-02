@@ -1,35 +1,15 @@
 package entity;
 
-public class Trainer {
-    private int trainerId;
-    private String trainerName;
+public class Trainer extends Person {
     private String specialization;
-    private String phone;
 
-    public Trainer(){
-    }
-
-    public Trainer(int trainerId, String trainerName, String specialization, String phone) {
-        this.trainerId = trainerId;
-        this.trainerName = trainerName;
+    public Trainer(int id, String name, String phone, String specialization) {
+        super(id, name, phone);
         this.specialization = specialization;
-        this.phone = phone;
     }
-
-    public int getTrainerId() {
-        return trainerId;
-    }
-
-    public void setTrainerId(int trainerId) {
-        this.trainerId = trainerId;
-    }
-
-    public String getTrainerName() {
-        return trainerName;
-    }
-
-    public void setTrainerName(String trainerName) {
-        this.trainerName = trainerName;
+    public Trainer(String name, String phone, String specialization) {
+        super(name, phone);
+        this.specialization = specialization;
     }
 
     public String getSpecialization() {
@@ -40,11 +20,6 @@ public class Trainer {
         this.specialization = specialization;
     }
 
-    public String getPhone() {
-        return phone;
-    }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+
 }

@@ -5,11 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseRepository {
-    private static String jdbcURL = "jdbc:mysql://localhost:3306/gym_management3?useSSL=false";
+    private static String jdbcURL = "jdbc:mysql://localhost:3306/gym_management?useSSL=false";
     private static String jdbcUsername = "root";
-    private static String jdbcPassword = "123456";
-    private static Connection connection =null;
+    private static String jdbcPassword = "9999";
+    private static Connection connection = null;
+
     private BaseRepository() {
+
     }
 
     static {
@@ -26,4 +28,6 @@ public class BaseRepository {
     public static Connection getConnection() {
         return connection;
     }
+
+
 }
