@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/view/utils/bootstrap.jsp" %>
+<%@include file="/WEB-INF/utils/header.jsp"%>
 <html>
 <head>
     <title>Update Customer</title>
@@ -17,15 +18,15 @@
     <form method="post">
         <input type="hidden" name="id" value="${customer.id}">
         <div class="form-group">
-            <label for="updatedName">Name:</label>
+            <label for="updatedName">Tên:</label>
             <input type="text" class="form-control" id="updatedName" name="updatedName" value="${customer.name}">
         </div>
         <div class="form-group">
-            <label for="updatedAge">Age:</label>
+            <label for="updatedAge">Tuổi:</label>
             <input type="number" class="form-control" id="updatedAge" name="updatedAge" value="${customer.age}">
         </div>
         <div class="form-group">
-            <label for="updatedPhone">Phone:</label>
+            <label for="updatedPhone">Số điện thoại:</label>
             <input type="text" class="form-control" id="updatedPhone" name="updatedPhone" value="${customer.phone}">
         </div>
         <div class="form-group">
@@ -33,7 +34,7 @@
             <input type="email" class="form-control" id="updatedEmail" name="updatedEmail" value="${customer.email}">
         </div>
         <div class="form-group">
-            <label for="updatedClassId">Class:</label>
+            <label for="updatedClassId">Lớp học:</label>
             <select class="form-control" id="updatedClassId" name="updatedClassId">
                 <c:forEach var="gymClass" items="${gymClasses}">
                     <option value="${gymClass.classId}"
@@ -44,7 +45,7 @@
 
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Cập nhập</button>
     </form>
 </div>
 </body>

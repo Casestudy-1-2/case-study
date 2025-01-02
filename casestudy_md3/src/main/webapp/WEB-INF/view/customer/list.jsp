@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/view/utils/bootstrap.jsp" %>
+<%@include file="/WEB-INF/utils/header.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -15,7 +16,7 @@
 <body>
 <div class="container">
     <h1>Danh Sách Khách Hàng</h1>
-    <button class="btn btn-primary m-4" onclick="window.location.href='/customer?action=create'">Add New</button>
+    <button class="btn btn-primary m-4" onclick="window.location.href='/customer?action=create'">Thêm mới</button>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -39,12 +40,12 @@
                 <td>${customer.className}</td>
                 <td>
                     <button class="btn btn-warning"
-                            onclick="window.location.href='/customer?action=update&id=${customer.id}'">Update
+                            onclick="window.location.href='/customer?action=update&id=${customer.id}'">Cập nhập
                     </button>
                 </td>
                 <td>
                     <button class="btn btn-danger"
-                            onclick="window.location.href='/customer?action=delete&id=${customer.id}'">Delete
+                            onclick="window.location.href='/customer?action=delete&id=${customer.id}'">Xóa
                     </button>
                 </td>
             </tr>

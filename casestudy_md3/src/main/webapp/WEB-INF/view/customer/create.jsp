@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="/WEB-INF/view/utils/bootstrap.jsp"%>
+<%@include file="/WEB-INF/utils/header.jsp"%>
 <html>
 <head>
     <title>Title</title>
@@ -39,7 +40,7 @@
                 </c:forEach>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
 
     </form>
 </div>
