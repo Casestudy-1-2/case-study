@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GymClassRepository {
+
     public List<GymClass> getAll() {
         List<GymClass> gymClass = new ArrayList<>();
         try {
@@ -17,11 +18,7 @@ public class GymClassRepository {
             while (resultSet.next()) {
                 int classId = resultSet.getInt("class_id");
                 String className = resultSet.getString("class_name");
-                String classTime = resultSet.getString("class_time");
-                int maxCapacity = resultSet.getInt("max_capacity");
-                int trainerId = resultSet.getInt("trainer_id");
-                int gymID = resultSet.getInt("gym_id");
-                gymClass.add(new GymClass(classId, className, classTime, maxCapacity, trainerId, gymID));
+                gymClass.add(new GymClass(classId, className));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

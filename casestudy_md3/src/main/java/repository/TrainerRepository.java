@@ -1,6 +1,7 @@
 package repository;
 
-import dto.GymClassDTO;
+import dto.TrainerDTO;
+import entity.Trainer;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,36 +10,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrainerRepository {
-    public List<GymClassDTO> getAllTrainerDTO(){
-        List<GymClassDTO> gymClassDTO = new ArrayList<>();
-        try{
-            PreparedStatement statement = BaseRepository.getConnection().prepareStatement("SELECT \n" +
-                    "    g.class_id,\n" +
-                    "    g.class_name,\n" +
-                    "    g.class_time,\n" +
-                    "    g.max_capacity,\n" +
-                    "    t.trainer_id,\n" +
-                    "    t.trainer_name,\n" +
-                    "    t.specialization,\n" +
-                    "    t.phone\n" +
-                    "FROM \n" +
-                    "    gym_classes g\n" +
-                    "LEFT JOIN \n" +
-                    "    trainers t\n" +
-                    "ON \n" +
-                    "    g.trainer_id = t.trainer_id;\n");
+    public List<Trainer> getAll() {
+        return null;
+
+    }
+
+    public List<TrainerDTO> getAllDTO() {
+        List<TrainerDTO> trainerDTO = new ArrayList<>();
+        String query = "SELECT trainers.trainer_id, trainers.trainer_name, trainers.specialization, trainers.phone, gym_classes.class_name " +
+                "FROM trainers " +
+                "JOIN gym_classes ON trainers.trainer_id = gym_classes.trainer_id";
+
+        try {
+            PreparedStatement statement = BaseRepository.getConnection().prepareStatement(query);
             ResultSet resultSet = statement.executeQuery();
-            while(resultSet.next()){
-                int trainerId = resultSet.getInt("trainer_id");
-                String trainerName = resultSet.getString("trainer_name");
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("trainer_id");
+                String name = resultSet.getString("trainer_name");
                 String specialization = resultSet.getString("specialization");
                 String phone = resultSet.getString("phone");
                 String className = resultSet.getString("class_name");
-                gymClassDTO.add(new GymClassDTO(trainerId, trainerName, specialization, phone ,className));
+                trainerDTO.add(new TrainerDTO(id, name, specialization, phone, className));
             }
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return gymClassDTO;
+
+        return trainerDTO;
     }
+
+    public void add(Trainer trainer) {
+
+    }
+
+
 }

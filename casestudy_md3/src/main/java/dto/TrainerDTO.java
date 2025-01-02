@@ -1,27 +1,21 @@
 package dto;
 
-public class CustomerDTO {
+public class TrainerDTO {
     private int id;
     private String name;
-    private int age;
+    private String specialization;
     private String phone;
-    private String email;
     private String className;
-    public CustomerDTO() {
+    public TrainerDTO() {
 
     }
-
-
-
-    public CustomerDTO(int id, String name, int age, String phone, String email, String className) {
+    public TrainerDTO(int id, String name, String specialization, String phone, String className) {
         this.id = id;
         this.name = name;
-        this.age = age;
+        this.specialization = specialization;
         this.phone = phone;
-        this.email = email;
         this.className = className;
     }
-
     public int getId() {
         return id;
     }
@@ -34,23 +28,17 @@ public class CustomerDTO {
     public void setName(String name) {
         this.name = name;
     }
-    public int getAge() {
-        return age;
+    public String getSpecialization() {
+        return specialization;
     }
-    public void setAge(int age) {
-        this.age = age;
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
     public String getPhone() {
         return phone;
     }
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
     }
     public String getClassName() {
         return className;
