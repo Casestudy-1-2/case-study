@@ -15,13 +15,13 @@ public class GymClassRepository {
             PreparedStatement statement = BaseRepository.getConnection().prepareStatement("select * from gym_classes");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                int id = resultSet.getInt("class_id");
+                int classId = resultSet.getInt("class_id");
                 String className = resultSet.getString("class_name");
                 String classTime = resultSet.getString("class_time");
                 int maxCapacity = resultSet.getInt("max_capacity");
                 int trainerId = resultSet.getInt("trainer_id");
                 int gymID = resultSet.getInt("gym_id");
-                gymClass.add(new GymClass(id, className, classTime, maxCapacity, trainerId, gymID));
+                gymClass.add(new GymClass(classId, className, classTime, maxCapacity, trainerId, gymID));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

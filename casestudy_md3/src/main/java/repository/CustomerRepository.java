@@ -3,6 +3,7 @@ package repository;
 import dto.CustomerDTO;
 import entity.Customer;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,10 +13,11 @@ import java.util.List;
 public class CustomerRepository {
 
     public List<Customer> getAll() {
+
         List<Customer> customers = new ArrayList<>();
         try {
             PreparedStatement statement = BaseRepository.getConnection()
-                    .prepareStatement("select * from customers" );
+                    .prepareStatement("select * from customers");
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("customer_id");
@@ -23,8 +25,7 @@ public class CustomerRepository {
                 int age = resultSet.getInt("age");
                 String phone = resultSet.getString("phone");
                 String email = resultSet.getString("email");
-                int idClass = resultSet.getInt("class_id");
-//                customers.add(new Customer(id, name, age, phone, email, idClass));
+                //        customers.add(new Customer(id, name, age, phone, email));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -32,14 +33,15 @@ public class CustomerRepository {
         return customers;
     }
 
-    public List<CustomerDTO> getAllDTO(){
-        List<CustomerDTO> customers = new ArrayList<>();
-        try {
-            PreparedStatement statement = BaseRepository.getConnection().prepareStatement("SELECT c.customer_id, c.customer_name, c.age, c.phone, c.email, g.class_name " +
-                    "FROM customers c " +
-                    "LEFT JOIN enrollments e ON c.customer_id = e.customer_id " +
-                    "LEFT JOIN gym_classes g ON e.class_id = g.class_id" );
-                ResultSet resultSet = statement.executeQuery();
+    public List<CustomerDTO> getAllDTO() {
+        List<CustomerDTO> customerDTO = new ArrayList<>();
+        String query = "SELECT c.customer_id, c.customer_name, c.age, c.phone, c.email, g.class_name " +
+                "FROM customers c " +
+                "LEFT JOIN enrollments e ON c.customer_id = e.customer_id " +
+                "LEFT JOIN gym_classes g ON e.class_id = g.class_id";
+        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
             while (resultSet.next()) {
                 int id = resultSet.getInt("customer_id");
                 String name = resultSet.getString("customer_name");
@@ -47,37 +49,53 @@ public class CustomerRepository {
                 String phone = resultSet.getString("phone");
                 String email = resultSet.getString("email");
                 String className = resultSet.getString("class_name");
-                customers.add(new CustomerDTO(id, name, age, phone, email, className));
+                customerDTO.add(new CustomerDTO(id, name, age, phone, email, className));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return customers;
+        return customerDTO;
     }
 
-    public void add(Customer customer) {
-        String sql = "INSERT INTO customers (customer_name, age, phone, email, class_id) VALUES (?, ?, ?, ?, ?)";
-        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(sql)) {
+    public void add(Customer customer, int classId) {
+        String sqlCustomer = "INSERT INTO customers (customer_name, age, phone, email) VALUES (?, ?, ?, ?)";
+        String sqlEnrollment = "INSERT INTO enrollments (customer_id, class_id, registration_date) VALUES (LAST_INSERT_ID(), ?, ?)";
+
+        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(sqlCustomer)) {
             statement.setString(1, customer.getName());
             statement.setInt(2, customer.getAge());
             statement.setString(3, customer.getPhone());
             statement.setString(4, customer.getEmail());
-            statement.setInt(5, customer.getIdClass());
             statement.executeUpdate();
+            try (PreparedStatement enrollmentStatement = BaseRepository.getConnection().prepareStatement(sqlEnrollment)) {
+                enrollmentStatement.setInt(1, classId);
+                enrollmentStatement.setDate(2, Date.valueOf(java.time.LocalDate.now()));
+                enrollmentStatement.executeUpdate();
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void update(Customer customer) {
-        try (PreparedStatement statement = BaseRepository.getConnection().
-                prepareStatement("update customers set customer_name = ?, age = ?, phone = ?, email = ? where customer_id = ?")) {
+    public void update(Customer customer, int newClassId) {
+        String updateCustomerSQL = "UPDATE customers SET customer_name = ?, age = ?, phone = ?, email = ? WHERE customer_id = ?";
+        String updateEnrollmentSQL = "UPDATE enrollments SET class_id = ? WHERE customer_id = ?";
+
+        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(updateCustomerSQL)) {
             statement.setString(1, customer.getName());
             statement.setInt(2, customer.getAge());
             statement.setString(3, customer.getPhone());
             statement.setString(4, customer.getEmail());
             statement.setInt(5, customer.getId());
             statement.executeUpdate();
+            if (newClassId != -1) {
+                try (PreparedStatement enrollmentStatement = BaseRepository.getConnection().prepareStatement(updateEnrollmentSQL)) {
+                    enrollmentStatement.setInt(1, newClassId);
+                    enrollmentStatement.setInt(2, customer.getId());
+                    enrollmentStatement.executeUpdate();
+                }
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -104,12 +122,12 @@ public class CustomerRepository {
                 int age = resultSet.getInt("age");
                 String phone = resultSet.getString("phone");
                 String email = resultSet.getString("email");
-                int idClass = resultSet.getInt("class_id");
-                return new Customer(id, name, age, phone, email, idClass);
+                Integer idClass = null;
+                customer = new Customer(id, name, age, phone, email, idClass);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return null;
+        return customer;
     }
 }
