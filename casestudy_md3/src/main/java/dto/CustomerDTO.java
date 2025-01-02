@@ -68,15 +68,4 @@ public class CustomerDTO {
         this.className = className;
     }
 
-    @Override
-    public String toString() {
-        return "CustomerDTO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", className='" + className + '\'' +
-                '}';
-    }
 }

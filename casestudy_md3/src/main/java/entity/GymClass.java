@@ -1,15 +1,15 @@
 package entity;
 
 public class GymClass {
-    private int id;
+    private int classId;
     private String className;
     private String classTime;
     private int maxCapacity;
     private int trainerId;
     private int gymId;
 
-    public GymClass(int id, String className, String classTime, int maxCapacity, int trainerId, int gymId) {
-        this.id = id;
+    public GymClass(int classId, String className, String classTime, int maxCapacity, int trainerId, int gymId) {
+        this.classId = classId;
         this.className = className;
         this.classTime = classTime;
         this.maxCapacity = maxCapacity;
@@ -17,11 +17,11 @@ public class GymClass {
         this.gymId = gymId;
     }
 
-    public int getId() {
-        return id;
+    public int getClassId() {
+        return classId;
     }
-    public void setId(int id) {
-        this.id = id;
+    public void setClassId(int classId) {
+        this.classId = classId;
     }
 
     public String getClassName() {
@@ -56,15 +56,4 @@ public class GymClass {
         this.gymId = gymId;
     }
 
-    @Override
-    public String toString() {
-        return "GymClass{" +
-                "id=" + id +
-                ", className='" + className + '\'' +
-                ", classTime='" + classTime + '\'' +
-                ", maxCapacity=" + maxCapacity +
-                ", trainerId=" + trainerId +
-                ", gymId=" + gymId +
-                '}';
-    }
 }
