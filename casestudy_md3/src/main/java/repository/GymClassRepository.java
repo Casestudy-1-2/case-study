@@ -1,6 +1,8 @@
+
 package repository;
 
-import entity.GymClass;
+import model.GymClass;
+import model.Trainer;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GymClassRepository {
-
     public List<GymClass> getAll() {
         List<GymClass> gymClass = new ArrayList<>();
         try {
@@ -18,7 +19,11 @@ public class GymClassRepository {
             while (resultSet.next()) {
                 int classId = resultSet.getInt("class_id");
                 String className = resultSet.getString("class_name");
-                gymClass.add(new GymClass(classId, className));
+                String classTime = resultSet.getString("class_time");
+                int maxCapacity = resultSet.getInt("max_capacity");
+                int trainer = resultSet.getInt("trainer_id");
+//                Trainer trainer = repo.findID(trainerId)
+                gymClass.add(new GymClass(classId, className, classTime, maxCapacity, trainer));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

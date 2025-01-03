@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: dung
@@ -14,7 +15,7 @@
             background-color: #303030;
             padding: 8px;
             text-align: center;
-            width: 98.4%;
+            width: 100%;
             position: fixed;
             top: 0;
         }
@@ -44,7 +45,7 @@
                         <a class="nav-link" href="/customer">Khách hàng</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Huấn luyện viên</a>
+                        <a class="nav-link" href="/trainer">Huấn luyện viên</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -64,10 +65,15 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
-<%--                <form class="d-flex" role="search">--%>
-<%--                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">--%>
-<%--                    <button class="btn btn-outline-success" type="submit">Search</button>--%>
-<%--                </form>--%>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+                <%--                <form class="d-flex" role="search">--%>
+                <%--                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">--%>
+                <%--                    <button class="btn btn-outline-success" type="submit">Search</button>--%>
+                <%--                </form>--%>
             </div>
         </div>
     </nav>

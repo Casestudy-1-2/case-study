@@ -1,7 +1,8 @@
+
 package service.impl;
 
 import dto.CustomerDTO;
-import entity.Customer;
+import model.Customer;
 import repository.CustomerRepository;
 import service.ICustomerService;
 
@@ -14,19 +15,12 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public List<Customer> getAll() {
-        List<Customer> customers = customerRepository.getAll();
-        return customers;
+        return customerRepository.getAll();
     }
 
     @Override
     public void add(Customer customer) {
         customerRepository.add(customer, customer.getIdClass());
-    }
-
-
-    @Override
-    public List<CustomerDTO> getAllDTO() {
-        return customerRepository.getAllDTO();
     }
 
     @Override
@@ -43,7 +37,11 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public Customer getById(int id) {
-        Customer customer = customerRepository.getById(id);
-        return customer;
+        return customerRepository.getById(id);
+    }
+
+    @Override
+    public List<CustomerDTO> getAllDTO() {
+        return customerRepository.getAllDTO();
     }
 }

@@ -1,9 +1,9 @@
+
 package service.impl;
 
-import entity.GymClass;
+import model.GymClass;
 import repository.GymClassRepository;
 import service.IGymClassService;
-import service.IService;
 
 import java.util.List;
 
@@ -12,7 +12,11 @@ public class GymClassService implements IGymClassService {
 
     @Override
     public List<GymClass> getAll() {
-        return gymClassRepository.getAll();
+        List<GymClass> gymClasses = gymClassRepository.getAll();
+        if (gymClasses.isEmpty()) {
+            throw new RuntimeException();
+        }
+        return gymClasses;
     }
 
     @Override

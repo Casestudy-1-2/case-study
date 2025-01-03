@@ -1,7 +1,7 @@
+
 package service;
 
-import entity.GymClass;
+import model.GymClass;
 
-public interface IGymClassService extends IService<GymClass> {
-
+public interface IGymClassService extends IService<GymClass>{
 }

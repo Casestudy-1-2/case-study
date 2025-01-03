@@ -5,17 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab86d73-b7ca-45d4-90df-6d0b1f384624" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295/storage_v2/_src_/schema/gym_management.R2liuA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295/storage_v2/_src_/schema/gym_management3.zL_qUw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0664dd9-4ea5-47f5-9b35-c2ac821d6c29.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0664dd9-4ea5-47f5-9b35-c2ac821d6c29/storage_v2/_src_/schema/gym_management3.zL_qUw.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/TrainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/GymClassDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/TrainerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/TrainerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Enrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Enrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GymClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/IGymClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/IGymClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/IService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ITrainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ITrainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/GymClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GymClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/TrainerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/TrainerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/utils/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/utils/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/utils/bootstrap.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +99,7 @@
     &quot;Tomcat Server.Tomcat 9.0.981.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.create.jsp.executor&quot;: &quot;Run&quot;,
     &quot;Tomcat Server.index.jsp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;thao1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/codegym/module3/casestudy/casestudy_md3&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -100,8 +120,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp\WEB-INF\view" />
       <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp\WEB-INF" />
+      <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp\WEB-INF\view" />
       <recent name="C:\codegym\case-study\casestudy_md3\src\main\webapp" />
     </key>
   </component>
@@ -224,6 +244,8 @@
       <workItem from="1735793564135" duration="1247000" />
       <workItem from="1735795058028" duration="4809000" />
       <workItem from="1735806385986" duration="497000" />
+      <workItem from="1735899563844" duration="10000" />
+      <workItem from="1735907124556" duration="661000" />
     </task>
     <servers />
   </component>
