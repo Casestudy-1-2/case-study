@@ -16,7 +16,7 @@
         <style>
             .main-layout {
                 display: flex;
-                padding-top: 80px;
+                padding-top: 60px;
             }
 
             .main-content {

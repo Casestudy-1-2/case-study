@@ -1,4 +1,6 @@
-package entity;
+package model;
+
+import java.util.Objects;
 
 public abstract class Person {
     private int id;
@@ -41,7 +43,24 @@ public abstract class Person {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id && Objects.equals(name, person.name) && Objects.equals(phone, person.phone);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, phone);
+    }
+
+    @Override
     public String toString() {
-        return "Person [id=" + id + ", name=" + name + ", phone=" + phone + "]";
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

@@ -89,7 +89,8 @@
 </head>
 <body>
 <div class="container">
-    <form method="post">
+    <form method="post" action="/customer">
+        <input type="hidden" class="form-control" id="action" name="action" value="create">
         <div class="form-group">
             <label for="name">Tên:</label>
             <input type="text" class="form-control" id="name" name="name">
@@ -111,7 +112,7 @@
             <select id="className" name="idClass" class="form-control">
                 <option value="">------Chọn lớp-------</option>
                 <c:forEach items="${gymClasses}" var="gymClass">
-                    <option value="${gymClass.id}">${gymClass.className}</option>
+                    <option value="${gymClass.classId}">${gymClass.className}</option>
                 </c:forEach>
             </select>
         </div>

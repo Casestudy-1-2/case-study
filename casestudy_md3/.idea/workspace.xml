@@ -5,21 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b206e39c-ea06-488f-a246-a3c813c2ff43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/GymClassDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Trainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3dd52d8f-21f2-402c-87a2-f326b6710295.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/TrainerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ITrainerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/impl/TrainerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/trainer/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/GymClassDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/TrainerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Enrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Enrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/GymClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/GymClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/CustomerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/GymClassRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/TrainerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/IGymClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/IGymClassService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/GymClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/GymClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/utils/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/utils/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/customer/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -212,7 +225,13 @@
       <workItem from="1735783432701" duration="2384000" />
       <workItem from="1735785832285" duration="8000" />
       <workItem from="1735785976217" duration="2967000" />
-      <workItem from="1735789110837" duration="2462000" />
+      <workItem from="1735789110837" duration="11657000" />
+      <workItem from="1735803006596" duration="343000" />
+      <workItem from="1735803857032" duration="69000" />
+      <workItem from="1735804006741" duration="4709000" />
+      <workItem from="1735821558582" duration="9978000" />
+      <workItem from="1735837237717" duration="2051000" />
+      <workItem from="1735866598192" duration="20974000" />
     </task>
     <servers />
   </component>

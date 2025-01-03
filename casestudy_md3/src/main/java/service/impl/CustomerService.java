@@ -1,7 +1,7 @@
 package service.impl;
 
 import dto.CustomerDTO;
-import entity.Customer;
+import model.Customer;
 import repository.CustomerRepository;
 import service.ICustomerService;
 

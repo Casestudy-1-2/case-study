@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: dung
-  Date: 12/29/2024
-  Time: 4:02 PM
+  Date: 1/2/2025
+  Time: 8:32 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -108,63 +108,56 @@
 </head>
 <body>
 <div class="container">
-    <h1>Danh Sách Khách Hàng</h1>
-    <button class="btn btn-primary m-4" onclick="window.location.href='/customer?action=create'">Thêm mới</button>
+    <h1>Danh Sách Huấn Luyện Viên</h1>
+    <button class="btn btn-primary m-4" onclick="window.location.href='/trainer?action=create'">Thêm mới</button>
     <table class="table table-hover">
         <thead>
         <tr>
             <th>ID</th>
             <th>Tên</th>
-            <th>Tuổi</th>
-            <th>Điện Thoại</th>
-            <th>Email</th>
+            <th>Chuyên môn</th>
+            <th>Điện thoại</th>
             <th>Lớp</th>
             <th style="text-align: center" colspan="2">Chức năng</th>
 
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="customer" items="${customers}" varStatus="status">
+        <c:forEach var="trainer" items="${trainers}" varStatus="status">
             <tr>
                 <td>${status.count}</td>
-                <td>${customer.name}</td>
-                <td>${customer.age}</td>
-                <td>${customer.phone}</td>
-                <td>${customer.email}</td>
-                <td>${customer.className}</td>
+                <td>${trainer.name}</td>
+                <td>${trainer.specialization}</td>
+                <td>${trainer.phone}</td>
+                <td>${trainer.className}</td>
                 <td>
                     <button class="btn btn-warning"
-                            onclick="window.location.href='/customer?action=update&id=${customer.id}'">Cập nhật
+                            onclick="window.location.href='/trainer?action=update&id=${trainer.id}'">Cập nhật
                     </button>
                 </td>
-<%--                <td>--%>
-<%--                    <button class="btn btn-danger"--%>
-<%--                            onclick="window.location.href='/customer?action=delete&id=${customer.id}'">Xóa--%>
-<%--                    </button>--%>
-<%--                </td>--%>
                 <td>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete${customer.id}">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete${trainer.id}">
                         Xóa
                     </button>
                 </td>
-                <div class="modal fade" id="modalDelete${customer.id}" tabindex="-1"
+                <div class="modal fade" id="modalDelete${trainer.id}" tabindex="-1"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Xóa Khách hàng</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Xóa Huấn Luyên Viên</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Bạn có chắc muốn xóa khách hàng có tên là ${customer.name} và id là ${customer.id}?</p>
+                                <p>Bạn có chắc muốn xóa huấn luyên viên có tên là ${trainer.name} và id là ${trainer.id}?</p>
                                 <small style="color: red; font-style: italic">Lưu ý hành động này không thể hoàn
                                     tác!</small>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                                 <button type="button" class="btn btn-danger"
-                                        onclick="window.location.href='/customer?action=delete&id=${customer.id}'">Xác
+                                        onclick="window.location.href='/trainer?action=delete&id=${trainer.id}'">Xác
                                     nhận
                                 </button>
                             </div>

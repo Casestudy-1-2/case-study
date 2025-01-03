@@ -1,8 +1,8 @@
 package controller;
 
 import dto.CustomerDTO;
-import entity.Customer;
-import entity.GymClass;
+import model.Customer;
+import model.GymClass;
 import service.ICustomerService;
 import service.IGymClassService;
 import service.impl.CustomerService;
@@ -23,6 +23,7 @@ public class CustomerController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
         if (action == null) {
             action = "";
@@ -30,7 +31,9 @@ public class CustomerController extends HttpServlet {
 
         switch (action) {
             case "create":
-                req.setAttribute("gymClasses", gymClassService.getAll());
+                List<GymClass> gymClasses = gymClassService.getAll();
+                System.out.println(gymClasses);
+                req.setAttribute("gymClasses", gymClasses);
                 req.getRequestDispatcher("WEB-INF/view/customer/create.jsp").forward(req, resp);
                 break;
             case "update":
@@ -40,6 +43,14 @@ public class CustomerController extends HttpServlet {
                 deleteCustomer(req, resp);
                 break;
             default:
+                String message = req.getParameter("message");
+                if(message != null){
+                    if(message.equals("deleted")){
+                        req.setAttribute("message", "Xóa thành công.");
+                    }else if(message.equals("created")){
+                        req.setAttribute("message", "Têm mới thành công.");
+                    }
+                }
                 List<CustomerDTO> customers = customerService.getAllDTO();
                 req.setAttribute("customers", customers);
                 req.getRequestDispatcher("WEB-INF/view/customer/list.jsp").forward(req, resp);
@@ -74,6 +85,7 @@ public class CustomerController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
         if (action == null) {
             action = "";
@@ -119,7 +131,7 @@ public class CustomerController extends HttpServlet {
             resp.sendRedirect("errorPage.jsp?error=idClass is required");
             return;
         }
-        Customer customer = new Customer(name, age, phone, email, idClass);
+        Customer customer = new Customer(name, phone, age, email, idClass);
         customerService.add(customer);
         resp.sendRedirect("/customer?message=created");
     }

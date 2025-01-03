@@ -1,7 +1,7 @@
 package service;
 
 import dto.CustomerDTO;
-import entity.Customer;
+import model.Customer;
 
 import java.util.List;
 

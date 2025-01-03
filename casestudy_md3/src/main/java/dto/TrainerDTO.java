@@ -1,37 +1,37 @@
 package dto;
 
-public class GymClassDTO {
-    private int trainerId;
-    private String trainerName;
+public class TrainerDTO {
+    private int id;
+    private String name;
     private String specialization;
     private String phone;
     private String className;
 
-    public GymClassDTO() {
+    public TrainerDTO() {
     }
 
-    public GymClassDTO(int trainerId, String trainerName, String specialization, String phone, String className) {
-        this.trainerId = trainerId;
-        this.trainerName = trainerName;
+    public TrainerDTO(int id, String name, String specialization, String phone, String className) {
+        this.id = id;
+        this.name = name;
         this.specialization = specialization;
         this.phone = phone;
         this.className = className;
     }
 
-    public int getTrainerId() {
-        return trainerId;
+    public int getid() {
+        return id;
     }
 
-    public void setTrainerId(int trainerId) {
-        this.trainerId = trainerId;
+    public void setid(int id) {
+        this.id = id;
     }
 
-    public String getTrainerName() {
-        return trainerName;
+    public String getname() {
+        return name;
     }
 
-    public void setTrainerName(String trainerName) {
-        this.trainerName = trainerName;
+    public void setname(String name) {
+        this.name = name;
     }
 
     public String getSpecialization() {
