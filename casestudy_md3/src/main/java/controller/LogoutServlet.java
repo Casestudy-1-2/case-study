@@ -20,6 +20,6 @@ public class LogoutServlet extends HttpServlet {
         }
 
         // Chuyển hướng về trang đăng nhập
-        resp.sendRedirect("login.jsp");
+//        resp.sendRedirect("WEB-INF/home.jsp");
     }
 }

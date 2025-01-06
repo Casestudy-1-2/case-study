@@ -43,4 +43,9 @@ public class CustomerService implements ICustomerService {
     public List<CustomerDTO> getAllDTO() {
         return customerRepository.getAllDTO();
     }
+
+    @Override
+    public List<CustomerDTO> searchByName(String name) {
+        return customerRepository.searchByName(name);
+    }
 }

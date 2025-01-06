@@ -131,4 +131,31 @@ public class CustomerRepository {
         return customer;
     }
 
+    public List<CustomerDTO> searchByName(String name) {
+        List<CustomerDTO> customerDTOList = new ArrayList<>();
+        String query = "SELECT c.customer_id, c.customer_name, c.age, c.phone, c.email, g.class_name " +
+                "FROM customers c " +
+                "LEFT JOIN enrollments e ON c.customer_id = e.customer_id " +
+                "LEFT JOIN gym_classes g ON e.class_id = g.class_id " +
+                "WHERE c.customer_name LIKE ?";  // Tìm kiếm theo tên khách hàng
+
+        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(query)) {
+            statement.setString(1, "%" + name + "%");
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("customer_id");
+                String customerName = resultSet.getString("customer_name");
+                int age = resultSet.getInt("age");
+                String phone = resultSet.getString("phone");
+                String email = resultSet.getString("email");
+                String className = resultSet.getString("class_name");
+                customerDTOList.add(new CustomerDTO(id, customerName, age, phone, email, className));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return customerDTOList;
+    }
+
 }

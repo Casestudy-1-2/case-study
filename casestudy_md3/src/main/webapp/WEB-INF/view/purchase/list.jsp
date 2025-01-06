@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: dung
-  Date: 1/2/2025
-  Time: 8:32 PM
+  User: Thao
+  Date: 1/5/2025
+  Time: 2:06 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -108,62 +108,66 @@
 </head>
 <body>
 <div class="container">
-    <h1>Danh Sách Huấn Luyện Viên</h1>
-    <form method="GET" action="/trainer?action=search">
-        <input type="text" name="searchName" placeholder="Tìm kiếm theo tên..." value="${searchName}">
-        <button type="submit">Tìm kiếm</button>
+    <h1>Danh Sách</h1>
+    <form action="/purchase?action=search" method="get">
+        <input type="text" name="search" placeholder="Nhập tên khách hàng" value="${param.search}">
+        <button class="btn btn-primary" type="submit">Tìm kiếm</button>
     </form>
 
-    <button class="btn btn-primary m-4" onclick="window.location.href='/trainer?action=create'">Thêm mới</button>
+    <button class="btn btn-primary m-4" onclick="window.location.href='/purchase?action=create'">Thêm mới</button>
     <table class="table table-hover">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Tên</th>
-            <th>Chuyên môn</th>
-            <th>Điện thoại</th>
-            <th>Lớp</th>
+            <th>Tên Khách Hàng</th>
+            <th>Loại thẻ</th>
+            <th>Ngày đăng ký</th>
+            <th>Tổng giá trị</th>
+            <th>Ngày hết hạn</th>
             <th style="text-align: center" colspan="2">Chức năng</th>
 
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="trainer" items="${trainers}" varStatus="status">
+        <c:forEach var="purchase" items="${purchases}" varStatus="status">
             <tr>
                 <td>${status.count}</td>
-                <td>${trainer.name}</td>
-                <td>${trainer.specialization}</td>
-                <td>${trainer.phone}</td>
-                <td>${trainer.className}</td>
+                <td>${purchase.customerName}</td>
+                <td>${purchase.cardName}</td>
+                <td>${purchase.purchaseDate}</td>
+                <td>${purchase.totalPrice}</td>
+                <td>${purchase.validUntil}</td>
                 <td>
                     <button class="btn btn-warning"
-                            onclick="window.location.href='/trainer?action=update&id=${trainer.id}'">Cập nhật
+                            onclick="window.location.href='/purchase?action=update&id=${purchase.purchaseId}'">Cập nhật
                     </button>
                 </td>
                 <td>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDelete${trainer.id}">
+                    <button class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#modalDelete${purchase.purchaseId}">
                         Xóa
                     </button>
                 </td>
-                <div class="modal fade" id="modalDelete${trainer.id}" tabindex="-1"
+                <div class="modal fade" id="modalDelete${purchase.purchaseId}" tabindex="-1"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Xóa Huấn Luyên Viên</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p>Bạn có chắc muốn xóa huấn luyên viên có tên là ${trainer.name} và id là ${trainer.id}?</p>
+                                <p>Bạn có chắc muốn xóa phiếu mua hàng có tên là ${purchase.customerName}
+                                    và ID là ${purchase.purchaseId}?</p>
                                 <small style="color: red; font-style: italic">Lưu ý hành động này không thể hoàn
                                     tác!</small>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                                 <button type="button" class="btn btn-danger"
-                                        onclick="window.location.href='/trainer?action=delete&id=${trainer.id}'">Xác
-                                    nhận
+                                        onclick="window.location.href='/purchase?action=delete&id=${purchase.purchaseId}'">
+                                    Xác nhận
                                 </button>
                             </div>
                         </div>
@@ -179,10 +183,6 @@
         </div>
     </c:if>
 </div>
+
 </body>
-<script>
-    setTimeout(function () {
-        document.getElementById("message").remove();
-    },3000)
-</script>
 </html>

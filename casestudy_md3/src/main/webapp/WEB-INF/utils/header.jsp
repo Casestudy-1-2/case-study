@@ -46,6 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/trainer">Huấn luyện viên</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/purchase">Thẻ Khách hàng</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">
@@ -66,7 +69,7 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
                 </ul>
 <%--                <form class="d-flex" role="search">--%>

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ICustomerService extends IService<Customer> {
     List<CustomerDTO> getAllDTO();
+    List<CustomerDTO> searchByName(String name);
 }

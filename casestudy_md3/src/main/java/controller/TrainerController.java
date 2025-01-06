@@ -28,6 +28,7 @@ public class TrainerController extends HttpServlet {
         if (action == null) {
             action = "";
         }
+        String searchName = req.getParameter("searchName");
         switch (action) {
             case "create":
                 req.setAttribute("gymClasses", gymClassService.getAll());
@@ -48,7 +49,14 @@ public class TrainerController extends HttpServlet {
                         req.setAttribute("message", "Thêm mới thành công.");
                     }
                 }
-                List<TrainerDTO> trainers = trainerService.getAllTrainerDTO();
+                List<TrainerDTO> trainers;
+                if (searchName != null && !searchName.isEmpty()) {
+                    trainers = trainerService.searchByName(searchName);
+                } else {
+                    trainers = trainerService.getAllTrainerDTO();
+                }
+
+//                List<TrainerDTO> trainers = trainerService.getAllTrainerDTO();
                 req.setAttribute("trainers", trainers);
                 req.getRequestDispatcher("WEB-INF/view/trainer/list.jsp").forward(req, resp);
         }

@@ -108,4 +108,30 @@ public class TrainerRepository {
         }
         return trainer;
     }
+
+    public List<TrainerDTO> searchByName(String searchName) {
+        List<TrainerDTO> trainerDTOList = new ArrayList<>();
+        String sql = "SELECT t.trainer_id, t.trainer_name, t.specialization, t.phone, g.class_name " +
+                "FROM trainers t " +
+                "LEFT JOIN gym_classes g ON t.class_id = g.class_id " +
+                "WHERE t.trainer_name LIKE ?";
+        try (PreparedStatement statement = BaseRepository.getConnection().prepareStatement(sql)) {
+            statement.setString(1, "%" + searchName + "%");
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    trainerDTOList.add(new TrainerDTO(
+                            resultSet.getInt("trainer_id"),
+                            resultSet.getString("trainer_name"),
+                            resultSet.getString("specialization"),
+                            resultSet.getString("phone"),
+                            resultSet.getString("class_name")
+                    ));
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error while searching trainer by name", e);
+        }
+        return trainerDTOList;
+    }
+
 }

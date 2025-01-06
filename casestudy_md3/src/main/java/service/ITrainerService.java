@@ -9,4 +9,6 @@ public interface ITrainerService extends IService<Trainer>{
     List<TrainerDTO> getAllTrainerDTO();
 
     Trainer getByIdTrainer(int id);
+
+    List<TrainerDTO> searchByName(String searchName);
 }

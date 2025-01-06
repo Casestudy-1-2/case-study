@@ -29,6 +29,13 @@ public class CustomerController extends HttpServlet {
             action = "";
         }
 
+        // Xử lý nếu không có action, nhưng có tham số searchName
+        if (action.isEmpty() && req.getParameter("searchName") != null) {
+            // Gọi hàm tìm kiếm nếu có tham số searchName
+            searchCustomer(req, resp);
+            return; // Dừng lại ở đây để không tiếp tục thực hiện default case
+        }
+
         switch (action) {
             case "create":
                 List<GymClass> gymClasses = gymClassService.getAll();
@@ -41,6 +48,9 @@ public class CustomerController extends HttpServlet {
                 break;
             case "delete":
                 deleteCustomer(req, resp);
+                break;
+            case "search":
+                searchCustomer(req, resp);
                 break;
             default:
                 String message = req.getParameter("message");
@@ -56,6 +66,21 @@ public class CustomerController extends HttpServlet {
                 req.getRequestDispatcher("WEB-INF/view/customer/list.jsp").forward(req, resp);
                 break;
         }
+    }
+
+    private void searchCustomer(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String searchName = req.getParameter("searchName");
+        List<CustomerDTO> customers;
+        if (searchName != null && !searchName.isEmpty()) {
+
+            customers = customerService.searchByName(searchName);
+            req.setAttribute("searchName", searchName);
+        } else {
+            customers = customerService.getAllDTO();
+        }
+        req.setAttribute("customers", customers);
+
+        req.getRequestDispatcher("WEB-INF/view/customer/list.jsp").forward(req, resp);
     }
 
     private static void showEditForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

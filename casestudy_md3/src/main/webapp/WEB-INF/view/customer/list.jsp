@@ -109,6 +109,11 @@
 <body>
 <div class="container">
     <h1>Danh Sách Khách Hàng</h1>
+    <form method="GET" action="/customer?action=search">
+        <input type="text" name="searchName" placeholder="Tìm kiếm theo tên..." value="${searchName}">
+        <button type="submit">Tìm kiếm</button>
+    </form>
+
     <button class="btn btn-primary m-4" onclick="window.location.href='/customer?action=create'">Thêm mới</button>
     <table class="table table-hover">
         <thead>

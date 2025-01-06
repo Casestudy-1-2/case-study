@@ -20,6 +20,11 @@ public class TrainerService implements ITrainerService {
     }
 
     @Override
+    public List<TrainerDTO> searchByName(String searchName) {
+        return trainerRepository.searchByName(searchName);
+    }
+
+    @Override
     public List<Trainer> getAll() {
         return null;
     }
